@@ -1,0 +1,36 @@
+{
+  "name": "ejs-web-blogs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/H3X-T/ejs-web-blogs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/H3X-T/ejs-web-blogs/issues"
+  },
+  "homepage": "https://github.com/H3X-T/ejs-web-blogs#readme",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-ejs-layouts": "^2.5.1",
+    "express-fileupload": "^1.3.1",
+    "express-session": "^1.17.2",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

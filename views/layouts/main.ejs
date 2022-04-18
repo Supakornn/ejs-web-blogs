@@ -14,11 +14,37 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <%- body -%>
+    <div class="container-xxl px-md-5 bg-white shadow-lg">
+      <!-- Header -->
+      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <!-- logo -->
+        <a href="/" class="d-flex align-items-center col-md3 mb-2 mb-md-0 text-dark text-decoration-none">
+          <img src="/img/logo.png" width="60" height="60" alt="Blog" />
+        </a>
+        <!-- Navbar -->
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="/" class="nav-link px-2 link px-2 link-secondary">Home</a></li>
+          <li><a href="/about" class="nav-link px-2 link px-2 link-secondary">About</a></li>
+          <li><a href="/submit" class="nav-link px-2 link px-2 link-secondary">Submit</a></li>
+          <li><a href="/contact" class="nav-link px-2 link px-2 link-secondary">Contact</a></li>
+        </ul>
+        <!-- Search -->
+        <div class="col-md-3 text-end">
+          <form action="/search" method="psot">
+            <input type="search" name="searchTerm" class="from-control" placeholder="Search..." autocomplete="off" aria-label="Search" />
+          </form>
+        </div>
+      </header>
+      <!-- Body -->
+      <main><%- body -%></main>
+      <!-- Footer -->
+      <footer class="py-5">
+        <p>Build by Supakorn</p>
+      </footer>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

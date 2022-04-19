@@ -10,3 +10,7 @@ body {
   background-image: url(/img/bg.svg);
   background-color: rgba(243, 243, 243);
 }
+
+a {
+  color: var(--bs-dark);
+}

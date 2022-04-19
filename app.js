@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(expressLayouts);
 
-app.set("layout", "./layouts/main");
+app.set("layout", "./layouts/main.ejs");
 app.set("view engine", "ejs");
 
 const routes = require("./server/routes/mainRoutes");

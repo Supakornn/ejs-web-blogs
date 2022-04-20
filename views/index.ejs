@@ -21,10 +21,77 @@
 
 <!-- Categories -->
 <div class="row row-cols-2 row-cols-lg-6 g-2 g-lg-3 py-4">
-  <a href="" class="col text-center category__link">
+  <!-- Categories Lsit -->
+  <% if(categories != "") { %> <% categories.forEach((category, index) => { %>
+  <a href="#" class="col text-center category__link">
     <div class="category__img shadow">
-      <img src="img/" alt="img" loading="lazy" />
+      <img src="img/<%- category.image %>" alt="<%- category.name %>" loading="lazy" />
     </div>
-    <div class="pt-1"></div>
+    <div class="pt-1"><%- category.name %></div>
+  </a>
+  <% } ) %> <% } %>
+
+  <a href="/categories" class="col text-center category__link">
+    <div class="category__img shadow">
+      <img src="img/dot.gif" alt="img" loading="lazy" />
+    </div>
+    <div class="pt-1">View all Categories</div>
   </a>
 </div>
+
+<!-- latest -->
+<section class="pb-4 pt-4">
+  <div class="d-flex mb-2 align-items center">
+    <h2>Latest</h2>
+    <a href="/latest" class="ms-auto">View More</a>
+  </div>
+
+  <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+    <a href="/#" class="col text-center category__link">
+      <div class="category__img category__img--large shadow">
+        <img src="img/latest.jpg" alt="img" loading="lazy" />
+      </div>
+      <div class="pt-1">Lorem ipsum dolor sit amet.</div>
+    </a>
+
+    <a href="/#" class="col text-center category__link">
+      <div class="category__img category__img--large shadow">
+        <img src="img/latest.jpg" alt="img" loading="lazy" />
+      </div>
+      <div class="pt-1">Lorem ipsum dolor sit amet.</div>
+    </a>
+
+    <a href="/#" class="col text-center category__link">
+      <div class="category__img category__img--large shadow">
+        <img src="img/latest.jpg" alt="img" loading="lazy" />
+      </div>
+      <div class="pt-1">Lorem ipsum dolor sit amet.</div>
+    </a>
+
+    <a href="/#" class="col text-center category__link">
+      <div class="category__img category__img--large shadow">
+        <img src="img/latest.jpg" alt="img" loading="lazy" />
+      </div>
+      <div class="pt-1">Lorem ipsum dolor sit amet.</div>
+    </a>
+
+    <a href="/#" class="col text-center category__link">
+      <div class="category__img category__img--large shadow">
+        <img src="img/latest.jpg" alt="img" loading="lazy" />
+      </div>
+      <div class="pt-1">Lorem ipsum dolor sit amet.</div>
+    </a>
+  </div>
+</section>
+
+<!-- Sbumit -->
+<section class="px-4 py-5 my-5 text-center">
+  <img src="img/submit.jpg" alt="img" class="d-block mx-auto mb-4 img-fluid" width="556" hieght="208" loading="lazy" />
+  <h1 class="display-5 fw-bold">Lorem ipsum dolor sit amet.</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, doloremque.</p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      <a href="/submit" class="btn btn-primary btn-dark btn-lg">Submit</a>
+    </div>
+  </div>
+</section>

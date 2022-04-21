@@ -1,17 +1,21 @@
 require("../models/db");
 const Category = require("../models/Category");
-const info = require("../models/info");
+const Info = require("../models/Info");
 
+// Home Controller
 exports.homepage = async (req, res) => {
   try {
     const limitnum = 5;
     const categories = await Category.find({}).limit(limitnum);
-    res.render("index", { title: "Home", categories });
+    const latest = await Info.find({}).sort({ _id: -1 }).limit(limitnum);
+    const info = { latest };
+    res.render("index", { title: "Home", categories, info });
   } catch (error) {
     res.status(500).send({ msg: error.message || "Error" });
   }
 };
 
+// Category Controller
 exports.allCategories = async (req, res) => {
   try {
     // const limitnum = 20;

@@ -8,4 +8,4 @@ db.once("open", function () {
 });
 
 require("./Category");
-require("./info");
+require("./Info");

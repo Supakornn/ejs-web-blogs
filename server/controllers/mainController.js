@@ -1,5 +1,6 @@
 require("../models/db");
 const Category = require("../models/Category");
+const info = require("../models/info");
 
 exports.homepage = async (req, res) => {
   try {

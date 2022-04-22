@@ -35,8 +35,8 @@ exports.allCategories = async (req, res) => {
 exports.Category = async (req, res) => {
   try {
     const id = req.params.id;
-    const categories = await Category.find({ category: id });
-    res.render("categories", { title: categories.name, categories });
+    const category = await Info.find({ category: id });
+    res.render("categories", { title: category.name, category });
   } catch (error) {
     res.status(500).send({ msg: error.message || "Error" });
   }

@@ -1,0 +1,25 @@
+<% if(info != null) { %>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><%- info.name %></li>
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-12 col-md-4">
+    <img src="/uploads/<%- info.image %>" alt="<%- info.name %> " class="img-fluid sticky-top" style="top: 20px" loading="lazy" />
+  </div>
+
+  <div class="col-12 col-md-8">
+    <div class="row">
+      <div class="col-12"><h1><%- info.name %></h1></div>
+      <div class="col-12 mb-"><i class="bi bi-tag"></i> <%- info.category %></div>
+      <div class="col-12" style="white-space: pre-line">
+        <h4>Info</h4>
+        <%- info.description %>
+      </div>
+    </div>
+  </div>
+</div>
+<% } %>

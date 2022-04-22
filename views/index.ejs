@@ -29,7 +29,9 @@
     </div>
     <div class="pt-1"><%- category.name %></div>
   </a>
-  <% } ) %> <% } %>
+  <% }) %> <% } else { %>
+  <p>No items found.</p>
+  <% } %>
 
   <a href="/categories" class="col text-center category__link">
     <div class="category__img shadow">
@@ -48,14 +50,121 @@
   </div>
   <!-- Latest List -->
   <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-    <% if(info != "") { %> <% info.latest.forEach((info, index) => { %>
-    <a href="latest/<%= info.id %>" class="col text-center category__link">
+    <% if(info.letest != "") { %> <% info.latest.forEach((info, index) => { %>
+    <a href="/info/<%= info.id %>" class="col text-center category__link">
       <div class="category__img category__img--large shadow">
         <img src="uploads/<%= info.image %> " alt="<%= info.name %>" loading="lazy" />
       </div>
       <div class="pt-1"><%= info.name %></div>
     </a>
-    <% }) %> <% } %>
+    <% }) %> <% } else { %>
+    <p>No items found.</p>
+    <% } %>
+  </div>
+</section>
+
+<!-- Category 1 example -->
+<section class="pb-4 pt-4">
+  <div class="d-flex mb-2 align-items center">
+    <h2>1</h2>
+    <a href="/latest" class="ms-auto">View More</a>
+  </div>
+  <!-- Latest List -->
+  <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+    <% if(info.one != "undefinded" && info.one.length > 0) { %> <% info.one.forEach((info, index) => { %>
+    <a href="/info/<%= info.id %>" class="col text-center category__link">
+      <div class="category__img category__img--large shadow">
+        <img src="uploads/<%= info.image %> " alt="<%= info.name %>" loading="lazy" />
+      </div>
+      <div class="pt-1"><%= info.name %></div>
+    </a>
+    <% }) %> <% } else { %>
+    <p>No items found.</p>
+    <% } %>
+  </div>
+</section>
+
+<!-- Category 2 example -->
+<section class="pb-4 pt-4">
+  <div class="d-flex mb-2 align-items center">
+    <h2>2</h2>
+    <a href="/latest" class="ms-auto">View More</a>
+  </div>
+  <!-- Latest List -->
+  <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+    <% if(info.two != "undefinded" && info.two.length > 0) { %> <% info.two.forEach((info, index) => { %>
+    <a href="/info/<%= info.id %>" class="col text-center category__link">
+      <div class="category__img category__img--large shadow">
+        <img src="uploads/<%= info.image %> " alt="<%= info.name %>" loading="lazy" />
+      </div>
+      <div class="pt-1"><%= info.name %></div>
+    </a>
+    <% }) %> <% } else { %>
+    <p>No items found.</p>
+    <% } %>
+  </div>
+</section>
+
+<!-- Category 3 example -->
+<section class="pb-4 pt-4">
+  <div class="d-flex mb-2 align-items center">
+    <h2>3</h2>
+    <a href="/latest" class="ms-auto">View More</a>
+  </div>
+  <!-- Latest List -->
+  <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+    <% if(info.three != "undefinded" && info.three.length > 0) { %> <% info.three.forEach((info, index) => { %>
+    <a href="/info/<%= info.id %>" class="col text-center category__link">
+      <div class="category__img category__img--large shadow">
+        <img src="uploads/<%= info.image %> " alt="<%= info.name %>" loading="lazy" />
+      </div>
+      <div class="pt-1"><%= info.name %></div>
+    </a>
+    <% }) %> <% } else { %>
+    <p>No items found.</p>
+    <% } %>
+  </div>
+</section>
+
+<!-- Category 4 example -->
+<section class="pb-4 pt-4">
+  <div class="d-flex mb-2 align-items center">
+    <h2>4</h2>
+    <a href="/latest" class="ms-auto">View More</a>
+  </div>
+  <!-- Latest List -->
+  <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+    <% if(info.four != "undefinded" && info.four.length > 0) { %> <% info.four.forEach((info, index) => { %>
+    <a href="/info/<%= info.id %>" class="col text-center category__link">
+      <div class="category__img category__img--large shadow">
+        <img src="uploads/<%= info.image %> " alt="<%= info.name %>" loading="lazy" />
+      </div>
+      <div class="pt-1"><%= info.name %></div>
+    </a>
+    <% }) %> <% } else { %>
+    <p>No items found.</p>
+    <% } %>
+  </div>
+</section>
+
+<!-- Category 5 example -->
+<section class="pb-4 pt-4">
+  <div class="d-flex mb-2 align-items center">
+    <h2>5</h2>
+    <a href="/latest" class="ms-auto">View More</a>
+  </div>
+  <!-- Latest List -->
+  <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+    <% if(info.five != "undefinded" && info.five.length > 0) { %> <% info.five.forEach((info, index) => { %>
+    <a href="/info/<%= info.id %>" class="col text-center category__link">
+      <div class="category__img category__img--large shadow">
+        <img src="uploads/<%= info.image %> " alt="<%= info.name %>" loading="lazy" />
+      </div>
+      <div class="pt-1"><%= info.name %></div>
+    </a>
+    <% }) %> <% } else { %>
+    <p>No items found.</p>
+    <% } %>
   </div>
 </section>
 

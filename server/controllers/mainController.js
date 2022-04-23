@@ -75,6 +75,7 @@ exports.latest = async (req, res) => {
   }
 };
 
+// Random Controller
 exports.random = async (req, res) => {
   try {
     const count = await Info.find().countDocuments();

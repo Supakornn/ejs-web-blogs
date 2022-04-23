@@ -89,5 +89,43 @@ exports.random = async (req, res) => {
 
 // Submit Controller
 exports.submit = async (req, res) => {
-  res.render("submit", { title: "Submit" });
+  const infoErrorsObj = req.flash("infoErrors");
+  const infoSubmitObj = req.flash("infoSubmit");
+  res.render("submit", { title: "Submit", infoErrorsObj, infoSubmitObj });
+};
+
+exports.submitPost = async (req, res) => {
+  try {
+    let imageUploadFile;
+    let uploadPath;
+    let newImageName;
+
+    if (!req.files || Object.keys(req.files).lenght === 0) {
+      console.log("No Files uploaded");
+    } else {
+      imageUploadFile = req.files.image;
+      newImageName = Date.now() + imageUploadFile.name;
+      uploadPath = require("path").resolve("./") + "/public/uploads/" + newImageName;
+      imageUploadFile.mv(uploadPath, (err) => {
+        if (err) return res.status(500).send(err);
+      });
+    }
+
+    const info = new Info({
+      name: req.body.name,
+      description: req.body.description,
+      email: req.body.email,
+      category: req.body.category,
+      image: newImageName
+    });
+
+    await info.save();
+
+    req.flash("infoSubmit", "Recipe has been added.");
+    res.redirect("/submit");
+  } catch (error) {
+    // res.json(error);
+    req.flash("infoErrors", error);
+    res.redirect("/submit");
+  }
 };

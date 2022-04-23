@@ -5,8 +5,21 @@
   </div>
 </div>
 
+
 <!-- Form -->
 <div class="row justify-content-center">
+  <% if(infoSubmitObj != '') { %>
+    <div class="col-8 alert alert-success" role="alert">
+      <%= infoSubmitObj %>
+    </div>
+  <% } %>
+
+  <% if(infoErrorsObj != '') { %>
+    <div class="col-8 alert alert-danger" role="alert">
+      <%= infoErrorsObj[0].message %>
+    </div>
+  <% } %>
+
   <div class="col-8">
     <form action="/submit" enctype="multipart/form-data" method="post">
       <div class="row g-3">
@@ -44,7 +57,7 @@
         <!-- Image -->
         <div class="col-12">
           <label for="image">Image</label>
-          <input type="file" name="image" class="for-control" accept="image/*" />
+          <input type="file" name="image" class="form-control" accept="image/*" />
       </div>
 
       <!-- Button -->

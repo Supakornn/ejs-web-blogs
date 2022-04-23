@@ -52,3 +52,33 @@ exports.info = async (req, res) => {
     res.status(500).send({ msg: error.message || "Error" });
   }
 };
+
+// Search Controller
+exports.search = async (req, res) => {
+  try {
+    const searchTerm = req.body.searchTerm;
+    const items = await Info.find({ $text: { $search: searchTerm } });
+    res.render("search", { title: "Search", items });
+  } catch (error) {
+    res.status(500).send({ msg: error.message || "Error" });
+  }
+};
+
+// Latest Controller
+exports.latest = async (req, res) => {
+  try {
+    const limitnum = 20;
+    const latest = await Info.find({}).sort({ _id: -1 }).limit(limitnum);
+    res.render("latest", { title: "Latest", latest });
+  } catch (error) {
+    res.status(500).send({ msg: error.message || "Error" });
+  }
+};
+
+exports.random = async (req, res) => {
+  try {
+    res.render("random", { title: "Random", random });
+  } catch (error) {
+    res.status(500).send({ msg: error.message || "Error" });
+  }
+};

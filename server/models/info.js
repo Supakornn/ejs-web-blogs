@@ -24,4 +24,6 @@ const infoSchema = new mongoose.Schema({
   }
 });
 
+infoSchema.index({ name: "text", description: "text" });
+
 module.exports = mongoose.model("info", infoSchema);

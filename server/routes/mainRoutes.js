@@ -6,5 +6,8 @@ router.get("/", mainController.homepage);
 router.get("/info/:id", mainController.info);
 router.get("/categories", mainController.allCategories);
 router.get("/categories/:id", mainController.Category);
+router.post("/search", mainController.search);
+router.get("/latest", mainController.latest);
+router.get("/random", mainController.random);
 
 module.exports = router;

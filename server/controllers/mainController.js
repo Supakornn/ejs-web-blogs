@@ -86,3 +86,8 @@ exports.random = async (req, res) => {
     res.status(500).send({ msg: error.message || "Error" });
   }
 };
+
+// Submit Controller
+exports.submit = async (req, res) => {
+  res.render("submit", { title: "Submit" });
+};

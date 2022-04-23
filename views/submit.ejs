@@ -1,0 +1,55 @@
+<div class="px-4 py-5 my-5 text-center">
+  <h1 class="display-5 fw-bold">Submit Your ......</h1>
+  <div class="col-lg-6 mx-auto">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis repellat sequi mollitia dolore asperiores quia.</p>
+  </div>
+</div>
+
+<!-- Form -->
+<div class="row justify-content-center">
+  <div class="col-8">
+    <form action="/submit" enctype="multipart/form-data" method="post">
+      <div class="row g-3">
+        <!-- Email -->
+        <div class="col-12">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" name="email" id="email" class="form-control"  />
+        </div>
+
+        <!-- Name -->
+        <div class="col-12">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" name="name" id="name" class="form-control"  />
+        </div>
+
+        <!-- Description -->
+        <div class="col-12">
+          <label for="description" class="form-label">Description</label>
+          <textarea name="description" id="description" class="form-control" cols="30" rows="4"></textarea>
+        </div>
+
+        <!-- Category -->
+        <div class="col-12">
+          <label for="category">Select Category</label>
+          <select name="category" class="form-select form-control" aria-label="Category">
+            <option>Select Category</option>
+            <option value="1">Category 1</option>
+            <option value="2">Category 2</option>
+            <option value="3">Category 3</option>
+            <option value="4">Category 4</option>
+            <option value="5">Category 5</option>
+          </select>
+        </div>
+
+        <!-- Image -->
+        <div class="col-12">
+          <label for="image">Image</label>
+          <input type="file" name="image" class="for-control" accept="image/*" />
+      </div>
+
+      <!-- Button -->
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>

@@ -77,7 +77,10 @@ exports.latest = async (req, res) => {
 
 exports.random = async (req, res) => {
   try {
-    res.render("random", { title: "Random", random });
+    const count = await Info.find().countDocuments();
+    const random = Math.floor(Math.random() * count);
+    const items = await Info.aggregate([{ $sample: { size: 5 } }]);
+    res.render("random", { title: "Random", items });
   } catch (error) {
     res.status(500).send({ msg: error.message || "Error" });
   }

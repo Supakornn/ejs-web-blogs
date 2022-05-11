@@ -10,7 +10,8 @@
 
 <!-- Categories -->
 <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 mb-4">
-  <% if(typeof categories !== "undefined" && categories.length > 0) { %> <% categories.forEach((category, index) => { %>
+  <% if(typeof categories !== "undefined" && categories.length > 0) { %> <%
+  categories.forEach((category, index) => { %>
   <a href="/categories/<%- category.name %> " class="col text-center category__link">
     <div class="category__img shadow">
       <img src="img/<%- category.image %>" alt="<%- category.name %>" loading="lazy" />
@@ -21,7 +22,8 @@
 </div>
 
 <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-  <% if(typeof category !== "undefined" && category.length > 0) { %> <% category.forEach((info, index) => { %>
+  <% if(typeof category !== "undefined" && category.length > 0) { %> <% category.forEach((info,
+  index) => { %>
   <a href="/info/<%= info.id %>" class="col text-center category__link">
     <div class="category__img category__img--large shadow">
       <img src="/uploads/<%= info.image %> " alt="<%= info.name %>" loading="lazy" />

@@ -98,6 +98,7 @@ exports.submitPost = async (req, res) => {
   try {
     let imageUploadFile;
     let uploadPath;
+
     let newImageName;
 
     if (!req.files || Object.keys(req.files).lenght === 0) {

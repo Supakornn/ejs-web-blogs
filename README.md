@@ -13,16 +13,16 @@ npm run dev || yarn rundev
 MONGO_URI=
 ```
 
-<h3>Expample</h3>
+<h3>Example</h3>
 
 ![](https://cdn.discordapp.com/attachments/922772649816498217/973830695619293194/unknown.png)
 
-## Support
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L4L6ARTNW)
-
----
-
-> GitHub [@H3XxT](https://github.com/H3XxT) &nbsp;&middot;&nbsp;
-> Twitter [@H3XxT_](https://twitter.com/H3XxT_) &nbsp;&middot;&nbsp;
-> Instagram [@supakornigm](https://instagram.com/supakornigm)
+## Contact
+<p>
+  <a href="https://www.linkedin.com/in/supakornieamgomol/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="https://www.instagram.com/supakornigm/"><img alt="Instagram" src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>
+  <a href="https://www.facebook.com/spkngap/"><img alt="Instagram" src="https://img.shields.io/badge/facebook-%231877F2.svg?&style=for-the-badge&logo=facebook&logoColor=white" /></a>
+  <a href="https://twitter.com/H3XxT_"><img alt="Twitter" src="https://img.shields.io/badge/twitter-%231877F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" /></a>
+  <a href="https://github.com/H3XxT"><img alt="Github" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /></a>
+</p>

@@ -4,7 +4,7 @@
 
 ```
 npm i || yarn start
-npm run dev || yarn rundev
+npm run dev || yarn dev
 ```
 
 <h3>ENV</h3>
